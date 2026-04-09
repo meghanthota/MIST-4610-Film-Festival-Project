@@ -34,5 +34,33 @@ INSERT DATA DICTIONARY IMAGES HERE*****
 
 # Queries
 
-INSERT QUERY IMAGES AND OUTPUTS
+1. 
 
+Question: Which film categories are generating the most revenue from submission fees? Managerial Justification: Helps festival organizers identify the most profitable film categories to prioritize marketing and budget allocation for next year.
+
+2. 
+Question: Which directors are involved in the most films (as either Primary or Assistant Directors)? Managerial Justification: Allows the VIP relations team to identify the most active directors at the festival to ensure they receive appropriate hospitality and scheduling accommodations.
+
+3. 
+Question: Identify screenings where the tickets sold represent less than 50% of the room's maximum capacity. Managerial Justification: Highlights underperforming screenings so the marketing team can run last-minute promotions or move future screenings to smaller, more cost-effective venues.
+
+4. 
+Question: Which submitting organizations have provided the highest number of films to the festival? Managerial Justification: Identifies key institutional partners (like universities or studios) so the festival can build stronger B2B relationships and offer bulk submission discounts.
+
+5. 
+Question: What is the overall check-in percentage for all ticket holders? Managerial Justification: Provides operations managers with a "no-show" metric, allowing them to confidently overbook high-demand screenings in the future without risking capacity issues.
+
+6. 
+Question: Which venues are generating individual concession transactions that are higher than the festival's overall average transaction amount? Managerial Justification: Helps inventory managers identify top-performing concession locations so they can prioritize restocking efforts and assign top sales staff to those venues.
+
+7. 
+Question: Which staff and volunteers are assigned to shifts but have not yet completed their required training? Managerial Justification: Crucial for liability and safety; allows HR to immediately contact untrained workers and pull them from the floor if necessary before their shift begins.
+
+8. 
+Question: Which specific venues and screening rooms are ADA accessible? Managerial Justification: Allows customer service representatives to quickly pull a list of compliant rooms to properly accommodate guests with disabilities and avoid compliance violations.
+
+9. 
+Question: What are the specific titles of films that are paired with companion pieces for double features? Managerial Justification: Helps the programming and printing teams verify the festival brochure to ensure double-features are advertised correctly together.
+
+10. 
+Question: What shifts are scheduled for the opening day of the festival (2026-05-10), and at which venues? Managerial Justification: Gives regional managers a clear operational schedule for opening day so they know exactly when and where to deploy their oversight teams.
