@@ -26,41 +26,249 @@ Awards: To handle the competitive side of PSFF, the Award table links directly t
 
 This structure ensures that PSFF can manage the "big picture" of the festival while still keeping track of the small details like volunteer training and food sales. This model accounts for various aspects that are needed to make the event run smoothly and has the potential to be useful in planning more efficient future festival through data analysis.
 
-INSERT DATA MODEL IMAGE HERE*******
+<img width="716" height="469" alt="Screenshot 2026-04-09 at 11 41 03 AM" src="https://github.com/user-attachments/assets/18b2574c-d7c0-4097-a33e-b047011318b6" />
 
 # Data Dictionary
+# MIST 4610 – Data Dictionary
 
-INSERT DATA DICTIONARY IMAGES HERE*****
+---
+
+## 1. Assignment
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| assignment.shift.id | References the scheduled shift time block. | INT | 11 | N/A | PK, FK → Shift.shift.id |
+| assignment.staff.id | References the assigned worker. | INT | 11 | N/A | PK, FK → Staff/Voulenteer.staff.id |
+| assignment.ven.id | References the venue where the shift takes place. | INT | 11 | N/A | FK → Shift.Venue_ven.id |
+| Assignment.checkin | Indicates if the worker clocked in for their shift. | VARCHAR | 45 | Yes|No | |
+
+---
+
+## 2. Award
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| Award.id | Unique identifier for the festival award. | INT | 11 | N/A | PK |
+| award.name | The title of the award (e.g., Best Picture). | VARCHAR | 45 | N/A | |
+| award.prize | The cash prize dollar amount associated with winning. | DECIMAL | 2 | Max 99 | |
+| Film_f.id | References the winning movie. | INT | 11 | N/A | FK → Film.f.id |
+
+---
+
+## 3. Category
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| cat.code | Unique identifier for the film category. | INT | 11 | N/A | PK |
+| cat.name | The descriptive name of the category. | VARCHAR | 45 | N/A | |
+| cat.max_runtime | The maximum allowed runtime for films in this category. | TIME | N/A | HH:MM:SS | |
+| cat.subfee | The dollar amount required to submit a film to this category. | DECIMAL | 5,2 | N/A | |
+
+---
+
+## 4. Consession Transaction
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| trans.id | Unique identifier for the customer's order receipt. | INT | 11 | N/A | PK |
+| Venue_ven.id | References where the purchase occurred. | INT | 11 | N/A | FK → Venue.ven.id |
+| trans.datetime | The exact date and timestamp the purchase was made. | DATETIME | N/A | YYYY-MM-DD HH:MM:SS | |
+| trans.total | The total dollar amount charged to the customer. | DECIMAL | 5 | N/A | |
+
+---
+
+## 5. Customer
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| cust.id | Unique identifier for the festival attendee. | INT | 11 | N/A | PK |
+| cust.name | The first and last name of the customer. | VARCHAR | 45 | N/A | |
+| cust.phone | Contact phone number for the customer. | VARCHAR | 10 | 10 digits | |
+| cust.email | The customer's email address for digital ticket delivery. | VARCHAR | 45 | name@domain.com | |
+
+---
+
+## 6. Film
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| f.id | Unique identifier for the film. | INT | 11 | N/A | PK |
+| f.title | The title of the film. | VARCHAR | 45 | N/A | |
+| f.language | The primary spoken language of the film. | VARCHAR | 45 | N/A | |
+| f.country | The country where the film was produced. | VARCHAR | 20 | N/A | |
+| f.rating | The festival's internal quality rating. | INT | 11 | 1-10 | |
+| f.runtime | The total runtime duration of the film. | TIME | N/A | HH:MM:SS | |
+| P_director.id | References the lead director. | INT | 11 | N/A | FK → Primary Director.p_direct.id |
+| A_director.id | References the assistant director. | INT | 11 | N/A | FK → Primary Director.p_direct.id |
+| f.sub.id | References the organization that submitted the film. | INT | 11 | N/A | FK → Submission.sub.id |
+| f.cat.code | References the competition category. | INT | 11 | N/A | FK → Category.cat.code |
+| paired.film.id | References a companion film for double-features. | INT | 11 | N/A | FK → Film.f.id |
+
+---
+
+## 7. Menu Item
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| menu.id | Unique identifier for the specific food or drink product. | INT | 11 | N/A | PK |
+| Vendor_ven.id | References the vendor who sells this item. | INT | 11 | N/A | FK → Vendor.ven.id |
+| menu.name | The descriptive name of the item being sold. | VARCHAR | 45 | N/A | |
+| menu.cost | The retail price of the item. | DECIMAL | 2 | Max 99 | |
+| menu.calorie | The caloric count of the item. | INT | 11 | N/A | |
+
+---
+
+## 8. Primary Director
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| p_direct.id | Unique identifier for each director. | INT | 11 | N/A | PK |
+| p_direct.fname | The director's first name. | VARCHAR | 45 | N/A | |
+| p_direct.lname | The director's last name. | VARCHAR | 45 | N/A | |
+| p_direct.phone | Contact phone number for the director. | VARCHAR | 10 | 10 digits | |
+
+---
+
+## 9. Reservation/Tickets
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| ticket.id | Unique identifier for the reservation block. | INT | 11 | N/A | PK |
+| Customer_cust.id | References the ticket buyer. | INT | 11 | N/A | FK → Customer.cust.id |
+| Screening_screen.id | References the specific screening event. | INT | 11 | N/A | FK → Screening.screen.id |
+| ticket.seats | The total number of seats purchased. | INT | 11 | N/A | |
+| ticket.checkin | Indicates if the customer has arrived. | VARCHAR | 45 | Yes|No | |
+
+---
+
+## 10. Screening
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| screen.id | Unique identifier for a specific screening event. | INT | 11 | N/A | PK |
+| Film_f.id | References the movie being shown. | INT | 11 | N/A | FK → Film.f.id |
+| screen.date | The calendar date the screening takes place. | DATE | N/A | YYYY-MM-DD | |
+| screen.starttime | The time of day the screening begins. | TIME | N/A | HH:MM:SS | |
+
+---
+
+## 11. Screening Room
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| Venue_ven.id | References the location of the room. | INT | 11 | N/A | PK, FK → Venue.ven.id |
+| Screening_screen.id | References the event taking place in the room. | INT | 11 | N/A | PK, FK → Screening.screen.id |
+| SR.max_runtime | The maximum time blocked off for this room reservation. | TIME | N/A | HH:MM:SS | |
+| SR.closedcaption | Indicates if the room supports closed captioning hardware. | VARCHAR | 3 | Yes|No | |
+| SR.adaaccess | Indicates if the room is wheelchair accessible. | VARCHAR | 3 | Yes|No | |
+| SR.maxcap | The maximum fire code seating capacity for the room. | VARCHAR | 45 | Numeric text | |
+
+---
+
+## 12. Shift
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| shift.id | Unique identifier for the scheduled shift block. | INT | 11 | N/A | PK |
+| Venue_ven.id | References the venue location for the shift. | INT | 11 | N/A | PK, FK → Venue.ven.id |
+| shift.date | The calendar date of the shift. | DATE | N/A | YYYY-MM-DD | |
+| shift.stime | The start time of the shift. | TIME | N/A | HH:MM:SS | |
+| shift.etime | The end time of the shift. | TIME | N/A | HH:MM:SS | |
+
+---
+
+## 13. Staff/Voulenteer
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| staff.id | Unique identifier for the employee or volunteer. | INT | 11 | N/A | PK |
+| staff.fname | The staff member's first name. | VARCHAR | 45 | N/A | |
+| staff.lname | The staff member's last name. | VARCHAR | 45 | N/A | |
+| staff.trained | Indicates if they completed orientation. | VARCHAR | 3 | Yes|No | |
+| staff.role | The specific job duty assigned to the staff member. | VARCHAR | 45 | N/A | |
+
+---
+
+## 14. Submission
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| sub.id | Unique identifier for the submitting organization. | INT | 11 | N/A | PK |
+| sub.name | Name of the studio, school, or organization. | VARCHAR | 45 | N/A | |
+| sub.phone | Contact phone number for the submitter. | VARCHAR | 10 | 10 digits | |
+| sub.email | Contact email address for the submitter. | VARCHAR | 45 | name@domain.com | |
+
+---
+
+## 15. Transaction Line Item
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| Consession Transaction_trans.id | References the specific customer receipt. | INT | 11 | N/A | PK, FK → Consession Transaction.trans.id |
+| Menu Item_menu.id | References the specific item purchased. | INT | 11 | N/A | PK, FK → Menu Item.menu.id |
+| lineitem.quantity | The number of this specific item purchased. | INT | 11 | N/A | |
+| lineitem.custom | Special instructions or modifications. | VARCHAR | 45 | N/A | |
+
+---
+
+## 16. Vendor
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| ven.id | Unique identifier for the food or merchandise vendor. | INT | 11 | N/A | PK |
+| ven.name | The business name of the vendor. | VARCHAR | 45 | N/A | |
+| ven.type | The category of the vendor. | VARCHAR | 45 | Food|Beverage | |
+| ven.phone | Contact phone number for the vendor. | VARCHAR | 10 | 10 digits | |
+
+---
+
+## 17. Venue
+
+| Column Name | Description | Data Type | Column Size | Format | Key |
+|-------------|-------------|----------|-------------|--------|-----|
+| ven.id | Unique identifier for the venue location. | INT | 11 | N/A | PK |
+| ven.name | The name of the theater or event space. | VARCHAR | 45 | N/A | |
+| ven.address | The physical street address of the venue. | VARCHAR | 45 | N/A | |
+| ven.phone | Contact phone number for the venue's front desk. | VARCHAR | 10 | 10 digits | |
 
 # Queries
-
-1. 
-
+1. Revenue Analysis by Category (WORKS)
 Question: Which film categories are generating the most revenue from submission fees? Managerial Justification: Helps festival organizers identify the most profitable film categories to prioritize marketing and budget allocation for next year.
+<img width="517" height="406" alt="image" src="https://github.com/user-attachments/assets/361f0292-be02-497b-bb6a-0317909176e4" />
 
-2. 
+
+2. Director Workload (WORKS)
 Question: Which directors are involved in the most films (as either Primary or Assistant Directors)? Managerial Justification: Allows the VIP relations team to identify the most active directors at the festival to ensure they receive appropriate hospitality and scheduling accommodations.
+<img width="517" height="353" alt="image" src="https://github.com/user-attachments/assets/3c32788f-7ece-4c24-9a61-fae18c8fd3e7" />
 
-3. 
+3. Room Utilization (WORKS) 
 Question: Identify screenings where the tickets sold represent less than 50% of the room's maximum capacity. Managerial Justification: Highlights underperforming screenings so the marketing team can run last-minute promotions or move future screenings to smaller, more cost-effective venues.
+<img width="517" height="418" alt="image" src="https://github.com/user-attachments/assets/c78cf0ac-e52a-4179-baa1-fd58b07952f0" />
 
-4. 
+4. Top Submitting Organizations (WORKS)
 Question: Which submitting organizations have provided the highest number of films to the festival? Managerial Justification: Identifies key institutional partners (like universities or studios) so the festival can build stronger B2B relationships and offer bulk submission discounts.
+<img width="517" height="495" alt="image" src="https://github.com/user-attachments/assets/09ce64c9-3560-4455-9e98-fb9b2f63af96" />
 
-5. 
-Question: What is the overall check-in percentage for all ticket holders? Managerial Justification: Provides operations managers with a "no-show" metric, allowing them to confidently overbook high-demand screenings in the future without risking capacity issues.
+5. Overall Customer Check-in Rate (WORKS) Question: What is the overall check-in percentage for all ticket holders? Managerial Justification: Provides operations managers with a "no-show" metric, allowing them to confidently overbook high-demand screenings in the future without risking capacity issues.
+<img width="517" height="187" alt="image" src="https://github.com/user-attachments/assets/7c2f88e7-b0cd-4515-8734-9b773b050f76" />
 
-6. 
+6. Above-Average Concession Sales (Works)
 Question: Which venues are generating individual concession transactions that are higher than the festival's overall average transaction amount? Managerial Justification: Helps inventory managers identify top-performing concession locations so they can prioritize restocking efforts and assign top sales staff to those venues.
+<img width="517" height="373" alt="image" src="https://github.com/user-attachments/assets/d8a9da02-503e-475c-9f76-0ac5023c2ab3" />
 
-7. 
+7. Volunteer Training Compliance (Works)
 Question: Which staff and volunteers are assigned to shifts but have not yet completed their required training? Managerial Justification: Crucial for liability and safety; allows HR to immediately contact untrained workers and pull them from the floor if necessary before their shift begins.
+<img width="517" height="373" alt="image" src="https://github.com/user-attachments/assets/fdd0c558-47eb-49b4-bb7a-eb56a74da79c" />
 
-8. 
+8. ADA Accessibility Audit (Works)
 Question: Which specific venues and screening rooms are ADA accessible? Managerial Justification: Allows customer service representatives to quickly pull a list of compliant rooms to properly accommodate guests with disabilities and avoid compliance violations.
+<img width="517" height="444" alt="image" src="https://github.com/user-attachments/assets/7e6d3f08-8764-4a68-8dbc-663bb75a7038" />
 
-9. 
+9. Film Pairing Strategy (WORKS)
 Question: What are the specific titles of films that are paired with companion pieces for double features? Managerial Justification: Helps the programming and printing teams verify the festival brochure to ensure double-features are advertised correctly together.
+<img width="517" height="453" alt="image" src="https://github.com/user-attachments/assets/3a187858-930d-4c13-8e28-f201fc97dffb" />
 
-10. 
+10. Opening Day Shifts (Works)
 Question: What shifts are scheduled for the opening day of the festival (2026-05-10), and at which venues? Managerial Justification: Gives regional managers a clear operational schedule for opening day so they know exactly when and where to deploy their oversight teams.
+<img width="517" height="237" alt="image" src="https://github.com/user-attachments/assets/8ce01582-20ba-46ce-8a29-6725f1a0aec6" />
+
