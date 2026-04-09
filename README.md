@@ -1,2 +1,38 @@
-# MIST-4610-Film-Festival-Project
-Meghan Thota: Group Leader, Ori Cohen-Aka : SQL Writer, Rahul Pullolickal: Conceptual Modeler, Luke Van Putten: Data Wrangler/Database Designer
+# MIST 4610 Group 6: Peach State Film Festival
+
+# Problem Description
+The goal of this project is to build a relational database that handles the logistics for the Peach State Film Festival (PSFF), a week-long event hosted at various theaters across Atlanta. Running a festival involves balancing several moving parts: managing film submissions from global creators, scheduling screenings in specific theater rooms, and organizing a large team of volunteers. Our database is designed to keep these operations organized by tracking submission fees, film pairings, ticket reservations, and volunteer shifts. In addition to the case, our model accounts for the additional data tracking which vendors are selling food at which venues and managing the awards given to standout films. By centralizing this data, PSFF can better understand its venue traffic, theater capacity, and overall event success.
+
+# Team Members:
+Meghan Thota: Group Leader
+Ori Cohen-Aka : SQL Writer
+Luke Van Putten: Data Wrangler/Database Designer
+Rahul Pullolickal: Conceptual Modeler
+
+# Data Model
+Our model is built to show the real-world workflow of a film festival. The Film entity is the center of the system, storing details like language, origin, and rating. Each film is tied to a Category (ex: "documentary") which determines its submission fee and max runtime. We also included a self-referencing relationship in the Film table to handle "paired features," which allows the festival to link two films together for a special double-feature screening.
+
+To keep track of the film's crew, every film is linked to both a Primary Director and an Assistant Director. Our setup allows for flexibility, meaning a director can be the lead on one film but act as an assistant on another. This operates within the Primary Director entity and is made possible by the entitiy's one to many relationship with Film.
+
+The physical side of the festival is managed through Venues and Screening Rooms. Since a single venue has several rooms, we’ve tracked specific details for each, such as ADA accessibility and seating capacity. These rooms host the Screenings. When a Customer wants to see a movie, the Reservation/Tickets table acts as the link, tracking how many seats were booked and whether the person actually checked in at the door.
+
+Staffing is handled through Shifts and Assignments. Volunteers sign up for specific time slots at various venues, and our model ensures that no one is double-booked. The Assignment table works as a bridge to show which volunteers worked which shifts and whether they’ve completed their required training.
+
+In addition to the case provided, we added two key features to the festival's tracking database: 
+
+Vendors & Menu Items: We wanted to track the food and drink side of the event. Vendors are assigned to specific Venues, and their Menu Items are tracked through Transaction Line Items allowing us to see exactly how many of each menu item were purchased in each transcation. Additonally, concession transaction allow for us to see total spent at different vendors, at specific venues, and at each time of day. This allows the festival to see which snacks are selling best at different locations.
+
+Awards: To handle the competitive side of PSFF, the Award table links directly to Films, recording the award's prize and the specific film title of the award won.
+
+This structure ensures that PSFF can manage the "big picture" of the festival while still keeping track of the small details like volunteer training and food sales. This model accounts for various aspects that are needed to make the event run smoothly and has the potential to be useful in planning more efficient future festival through data analysis.
+
+INSERT DATA MODEL IMAGE HERE*******
+
+# Data Dictionary
+
+INSERT DATA DICTIONARY IMAGES HERE*****
+
+# Queries
+
+INSERT QUERY IMAGES AND OUTPUTS
+
