@@ -280,7 +280,7 @@ Question: What shifts are scheduled for the opening day of the festival (2026-05
 Managerial Justification: Gives regional managers a clear operational schedule for the highest-traffic evening shifts on opening night.
 <img width="554" height="246" alt="image" src="https://github.com/user-attachments/assets/b75d91a0-79a3-46ef-a2d5-568bd764f0e7" />
 
-**#Database information:**
+#Database information:
 Name of the database: mb_B6
 
 Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL GP_Q1();
