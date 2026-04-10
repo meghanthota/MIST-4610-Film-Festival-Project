@@ -232,43 +232,45 @@ This structure ensures that PSFF can manage the "big picture" of the festival wh
 | ven.phone | Contact phone number for the venue's front desk. | VARCHAR | 10 | 10 digits | |
 
 # Queries
-1. Revenue Analysis by Category (WORKS)
+1. Revenue Analysis by Category 
 Question: Which film categories are generating the most revenue from submission fees? Managerial Justification: Helps festival organizers identify the most profitable film categories to prioritize marketing and budget allocation for next year.
 <img width="517" height="406" alt="image" src="https://github.com/user-attachments/assets/361f0292-be02-497b-bb6a-0317909176e4" />
 
 
-2. Director Workload (WORKS)
+2. Director Workload 
 Question: Which directors are involved in the most films (as either Primary or Assistant Directors)? Managerial Justification: Allows the VIP relations team to identify the most active directors at the festival to ensure they receive appropriate hospitality and scheduling accommodations.
 <img width="517" height="353" alt="image" src="https://github.com/user-attachments/assets/3c32788f-7ece-4c24-9a61-fae18c8fd3e7" />
 
-3. Room Utilization (WORKS) 
+3. Room Utilization 
 Question: Identify screenings where the tickets sold represent less than 50% of the room's maximum capacity. Managerial Justification: Highlights underperforming screenings so the marketing team can run last-minute promotions or move future screenings to smaller, more cost-effective venues.
 <img width="517" height="418" alt="image" src="https://github.com/user-attachments/assets/c78cf0ac-e52a-4179-baa1-fd58b07952f0" />
 
-4. Top Submitting Organizations (WORKS)
+4. Top Submitting Organizations 
 Question: Which submitting organizations have provided the highest number of films to the festival? Managerial Justification: Identifies key institutional partners (like universities or studios) so the festival can build stronger B2B relationships and offer bulk submission discounts.
 <img width="517" height="495" alt="image" src="https://github.com/user-attachments/assets/09ce64c9-3560-4455-9e98-fb9b2f63af96" />
 
-5. Overall Customer Check-in Rate (WORKS) Question: What is the overall check-in percentage for all ticket holders? Managerial Justification: Provides operations managers with a "no-show" metric, allowing them to confidently overbook high-demand screenings in the future without risking capacity issues.
+5. Overall Customer Check-in Rate  Question: What is the overall check-in percentage for all ticket holders? Managerial Justification: Provides operations managers with a "no-show" metric, allowing them to confidently overbook high-demand screenings in the future without risking capacity issues.
 <img width="517" height="187" alt="image" src="https://github.com/user-attachments/assets/7c2f88e7-b0cd-4515-8734-9b773b050f76" />
 
-6. Above-Average Concession Sales (Works)
+6. Above-Average Concession Sales 
 Question: Which venues are generating individual concession transactions that are higher than the festival's overall average transaction amount? Managerial Justification: Helps inventory managers identify top-performing concession locations so they can prioritize restocking efforts and assign top sales staff to those venues.
 <img width="517" height="373" alt="image" src="https://github.com/user-attachments/assets/d8a9da02-503e-475c-9f76-0ac5023c2ab3" />
 
-7. Volunteer Training Compliance (Works)
-Question: Which staff and volunteers are assigned to shifts but have not yet completed their required training? Managerial Justification: Crucial for liability and safety; allows HR to immediately contact untrained workers and pull them from the floor if necessary before their shift begins.
-<img width="517" height="373" alt="image" src="https://github.com/user-attachments/assets/fdd0c558-47eb-49b4-bb7a-eb56a74da79c" />
+7. Unassigned Staff 
+Question: Which staff members and volunteers have not been assigned to any shifts?
+Managerial Justification: Identifies unused volunteer labor so coordinators can quickly fill schedule gaps and maximize their workforce.
+#ADD PHOTO
 
-8. ADA Accessibility Audit (Works)
-Question: Which specific venues and screening rooms are ADA accessible? Managerial Justification: Allows customer service representatives to quickly pull a list of compliant rooms to properly accommodate guests with disabilities and avoid compliance violations.
-<img width="517" height="444" alt="image" src="https://github.com/user-attachments/assets/7e6d3f08-8764-4a68-8dbc-663bb75a7038" />
+8. Theatrical Venue Audit 
+Question: Which venues have the word "Theatre", "Theater", or "Hall" in their name, and are actively hosting shifts?
+Managerial Justification: Helps the marketing team quickly differentiate traditional theatrical venues from modern arenas so they can tailor photography assignments.
+#ADD PHOTO
 
-9. Film Pairing Strategy (WORKS)
+9. Film Pairing Strategy 
 Question: What are the specific titles of films that are paired with companion pieces for double features? Managerial Justification: Helps the programming and printing teams verify the festival brochure to ensure double-features are advertised correctly together.
 <img width="517" height="453" alt="image" src="https://github.com/user-attachments/assets/3a187858-930d-4c13-8e28-f201fc97dffb" />
 
-10. Opening Day Shifts (Works)
-Question: What shifts are scheduled for the opening day of the festival (2026-05-10), and at which venues? Managerial Justification: Gives regional managers a clear operational schedule for opening day so they know exactly when and where to deploy their oversight teams.
-<img width="517" height="237" alt="image" src="https://github.com/user-attachments/assets/8ce01582-20ba-46ce-8a29-6725f1a0aec6" />
-
+10. Opening Night Evening Shifts 
+Question: What shifts are scheduled for the opening day of the festival (2026-05-10) that start at or after 4:00 PM (16:00:00), and at which venues?
+Managerial Justification: Gives regional managers a clear operational schedule for the highest-traffic evening shifts on opening night.
+#add photo
