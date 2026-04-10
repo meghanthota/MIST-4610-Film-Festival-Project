@@ -260,11 +260,13 @@ Question: Which venues are generating individual concession transactions that ar
 Question: Which staff members and volunteers have not been assigned to any shifts?
 Managerial Justification: Identifies unused volunteer labor so coordinators can quickly fill schedule gaps and maximize their workforce.
 #ADD PHOTO
+<img width="554" height="263" alt="image" src="https://github.com/user-attachments/assets/5f8178c8-f6c6-495d-97e6-0f18dfe9468a" />
 
 8. Theatrical Venue Audit 
 Question: Which venues have the word "Theatre", "Theater", or "Hall" in their name, and are actively hosting shifts?
 Managerial Justification: Helps the marketing team quickly differentiate traditional theatrical venues from modern arenas so they can tailor photography assignments.
-#ADD PHOTO
+<img width="554" height="487" alt="image" src="https://github.com/user-attachments/assets/19482e50-3413-447c-9591-dfa3b5da9cea" />
+
 
 9. Film Pairing Strategy 
 Question: What are the specific titles of films that are paired with companion pieces for double features? Managerial Justification: Helps the programming and printing teams verify the festival brochure to ensure double-features are advertised correctly together.
@@ -273,4 +275,5 @@ Question: What are the specific titles of films that are paired with companion p
 10. Opening Night Evening Shifts 
 Question: What shifts are scheduled for the opening day of the festival (2026-05-10) that start at or after 4:00 PM (16:00:00), and at which venues?
 Managerial Justification: Gives regional managers a clear operational schedule for the highest-traffic evening shifts on opening night.
-#add photo
+<img width="554" height="246" alt="image" src="https://github.com/user-attachments/assets/b75d91a0-79a3-46ef-a2d5-568bd764f0e7" />
+
