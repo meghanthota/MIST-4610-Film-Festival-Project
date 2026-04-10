@@ -246,7 +246,8 @@ Question: Which directors are involved in the most films (as either Primary or A
 
 3. Room Utilization 
 Question: Identify screenings where the tickets sold represent less than 50% of the room's maximum capacity. Managerial Justification: Highlights underperforming screenings so the marketing team can run last-minute promotions or move future screenings to smaller, more cost-effective venues.
-<img width="517" height="418" alt="image" src="https://github.com/user-attachments/assets/c78cf0ac-e52a-4179-baa1-fd58b07952f0" />
+<img width="418" height="378" alt="image" src="https://github.com/user-attachments/assets/5c80a129-e3d6-4553-b655-f9caf2fe8f1d" />
+
 
 4. Top Submitting Organizations 
 Question: Which submitting organizations have provided the highest number of films to the festival? Managerial Justification: Identifies key institutional partners (like universities or studios) so the festival can build stronger B2B relationships and offer bulk submission discounts.
