@@ -232,6 +232,9 @@ This structure ensures that PSFF can manage the "big picture" of the festival wh
 | ven.phone | Contact phone number for the venue's front desk. | VARCHAR | 10 | 10 digits | |
 
 # Queries
+<img width="457" height="526" alt="image" src="https://github.com/user-attachments/assets/5d2272f4-05ce-499f-bf8e-7be8907e61de" />
+
+
 1. Revenue Analysis by Category 
 Question: Which film categories are generating the most revenue from submission fees? Managerial Justification: Helps festival organizers identify the most profitable film categories to prioritize marketing and budget allocation for next year.
 <img width="517" height="406" alt="image" src="https://github.com/user-attachments/assets/361f0292-be02-497b-bb6a-0317909176e4" />
@@ -277,3 +280,7 @@ Question: What shifts are scheduled for the opening day of the festival (2026-05
 Managerial Justification: Gives regional managers a clear operational schedule for the highest-traffic evening shifts on opening night.
 <img width="554" height="246" alt="image" src="https://github.com/user-attachments/assets/b75d91a0-79a3-46ef-a2d5-568bd764f0e7" />
 
+**#Database information:**
+Name of the database: mb_B6
+
+Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL TP_Q1();
