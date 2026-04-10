@@ -259,7 +259,7 @@ Question: Which venues are generating individual concession transactions that ar
 7. Unassigned Staff 
 Question: Which staff members and volunteers have not been assigned to any shifts?
 Managerial Justification: Identifies unused volunteer labor so coordinators can quickly fill schedule gaps and maximize their workforce.
-#ADD PHOTO
+
 <img width="554" height="263" alt="image" src="https://github.com/user-attachments/assets/5f8178c8-f6c6-495d-97e6-0f18dfe9468a" />
 
 8. Theatrical Venue Audit 
