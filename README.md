@@ -283,4 +283,4 @@ Managerial Justification: Gives regional managers a clear operational schedule f
 **#Database information:**
 Name of the database: mb_B6
 
-Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL Group6_Q1();
+Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL GP_Q1();
